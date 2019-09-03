@@ -1,0 +1,39 @@
+@model ControleDeTarefas.Models.Tarefa
+
+@{
+    ViewData["Title"] = "Editando Tarefa " + @Model.codigo;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Editando Tarefa #@Model.codigo</h1>
+</div>
+
+<div class="form-horizontal">
+    <form action="Create" method="Post">
+
+        <input class="form-control" type="hidden" name="codigo" value="@Model.codigo"/>
+
+        <div class="form-group">
+            <label>Prioridade</label>
+            <input class="form-control" type="number" min="0" max="100" step=".10" name="prioridade" value="@Model.prioridade"/>
+        </div>
+
+        <div class="form-group">
+            <label>Nome</label>
+            <input class="form-control" type="text" name="nome" value="@Model.nome"/>
+        </div>
+
+        <div class="form-group">
+            <label>Data Limite</label>
+            <input class="form-control" type="date" name="dataLimite" value="@Model.dataLimite.ToString("yyyy-MM-dd")"/>
+        </div>
+
+        <div class="form-group">
+            <label>Percentual</label>
+            <input class="form-control" type="number" min="0" max="100" step=".10" name="percentual" value="@Model.percentual"/>
+        </div>
+
+        <input class="btn btn-primary" type="submit" value="Salvar"/>
+
+    </form>
+</div>

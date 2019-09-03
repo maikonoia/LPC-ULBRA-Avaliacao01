@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Nova Tarefa";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Nova Tarefa</h1>
+</div>
+
+<div class="form-horizontal">
+    <form action="Create" method="Post">
+
+        <div class="form-group">
+            <label>Código</label>
+            <input class="form-control" type="text" name="codigo"/>
+        </div>
+
+        <div class="form-group">
+            <label>Prioridade</label>
+            <input class="form-control" type="number" min="0" max="100" step=".10" name="prioridade"/>
+        </div>
+
+        <div class="form-group">
+            <label>Nome</label>
+            <input class="form-control" type="text" name="nome"/>
+        </div>
+
+        <div class="form-group">
+            <label>Data Limite</label>
+            <input class="form-control" type="date" name="dataLimite"/>
+        </div>
+
+        <div class="form-group">
+            <label>Percentual</label>
+            <input class="form-control" type="number" min="0" max="100" step=".10" name="percentual"/>
+        </div>
+
+        <input class="btn btn-primary" type="submit" value="Salvar"/>
+
+    </form>
+</div>
